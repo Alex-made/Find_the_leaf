@@ -46,15 +46,11 @@ public class Cell {
     public boolean hasLeast(int axe_x,int axe_y){
         //если в координатах axes есть листок, то вернуть истину
         //если в cellMap x,y   h==least, то вернуть истину
-        try {
-            if (cellMap.get(cells[axe_x][axe_y])=="least"){
+
+            if (cells[axe_x][axe_y]=="least"){
                 return true;
-            }
-        } catch (NullPointerException npe){
-            Log.w("исключение", npe.getMessage());
-        }
-        //TODO проверить, может всегда возвращается false?
-        return false;
+            } else {return false;}
+
     }
 
     //ячейка имеет барьер
